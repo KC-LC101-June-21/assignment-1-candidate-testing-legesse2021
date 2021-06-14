@@ -30,7 +30,7 @@ function askQuestion() {
   for (let i = 0; i < questions.length; i++) {
     candidateAnswers[i] = input.question(questions[i] + "\n" + candidateAnswer);
     console.log("Correct Answer: " + correctAnswers[i]);
-    console.log("Correct Answer: " + correctAnswers[i]);
+    console.log("Candidate Answer: " + candidateAnswers[i]);
     console.log("\n");
     }
   }
