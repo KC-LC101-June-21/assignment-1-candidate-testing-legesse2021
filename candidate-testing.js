@@ -6,7 +6,7 @@ const input = require('readline-sync');
 let candidateName = "";
 
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
-let question = "Who was the first American woman in space? ";
+let question = "Who was the first American woman in space?";
 let correctAnswer = "Sally Ride";
 let candidateAnswer = "";
 
@@ -31,7 +31,7 @@ function askQuestion() {
     candidateAnswers[i] = input.question(questions[i] + "\n" + candidateAnswer);
     console.log(`Correct Answer:   ${correctAnswers[i]}`);
     console.log(`Candidate Answer:   ${candidateAnswers[i]}`);
-    console.log("\n");
+    console.log(`\n`);
     }
   }
 
@@ -43,13 +43,13 @@ function gradeQuiz(candidateAnswers) {
   }
  }
  
-  console.log(`>>> Overall Grade: ${(grade) / questions.length * 100}% (${grade} of ${questions.length} responses correct) <<<`);
+  console.log(`>>> Overall Grade: ${(grade) / questions.length * 100}%  (${grade} of ${questions.length} responses correct ) <<<`);
   if (grade >= 4){
     console.log(`>>> Status: PASS <<< `);
   } else {
       console.log(`>>> Status: FAILED <<<`);
     }
-  grade = grade / questions.length * 100;
+  grade = grade / questions.length * 100; 
   return grade;
 }
     function runProgram() {
@@ -72,4 +72,9 @@ module.exports = {
   runProgram: runProgram
 };
 
+/*const candidateName = () => {
+  return "bob";
+};
+exports.candidateName = candidateName;
+const */
 
